@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Система нормирования убыли нефти</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        nav {
+            background-color: #333;
+            color: white;
+            padding: 10px;
+        }
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: space-around;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <!-- Панель навигации -->
+    <nav>
+ <ul>
+                <li><a href="{% url 'home' %}">Главная</a></li>
+                <li><a href="{% url 'oil_product_list' %}">Список нефтепродуктов</a></li>
+                <li><a href="{% url 'add_oil_product' %}">Добавить нефтепродукт</a></li>
+                <li><a href="{% url 'transaction_list' %}">Транзакции</a></li>
+                <li><a href="{% url 'generate_pdf' %}">PDF отчет</a></li>
+                <li><a href="{% url 'generate_excel' %}">Excel отчет</a></li>
+                <li><a href="{% url 'profile' %}">Профиль</a></li>
+            </ul>
+    </nav>
+
+    <div>
+        {% block content %}
+        {% endblock %}
+    </div>
+  <footer>
+        <p>© 2024 Нормирование естественной убыли нефти и нефтепродуктов</p>
+    </footer>
+</body>
+</html>

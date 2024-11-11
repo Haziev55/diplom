@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<title>Список транзакций</title>
+</head>
+<body>
+<h1>Список транзакций</h1>
+<ul>
+    {% for transaction in transactions %}
+        <li>{{ transaction.oil_product.name }} - Потери: {{ transaction.calculate_loss }} м³ ({{ transaction.date }})</li>
+    {% endfor %}
+</ul>
+<p>Общая естественная убыль: {{ total_loss }} м³</p>
+</body>
+</html>

@@ -1,0 +1,12 @@
+{% extends 'oil_loss/base.html' %}
+
+{% block title %}Добавить нефтепродукт{% endblock %}
+
+{% block content %}
+<h2>Добавить новый нефтепродукт</h2>
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Сохранить</button>
+</form>
+{% endblock %}

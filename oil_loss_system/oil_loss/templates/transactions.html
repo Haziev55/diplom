@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Система нормирования убыли нефти</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        nav {
+            background-color: #333;
+            color: white;
+            padding: 10px;
+        }
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: space-around;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <!-- Панель навигации -->
+    <nav>
+        <ul>
+            <li><a href="/">Главная</a></li>
+            <li><a href="/add_oil_product/">Добавить нефтепродукт</a></li>
+            <li><a href="/transactions/">Транзакции</a></li>
+            <li><a href="/report/pdf/">Отчет PDF</a></li>
+            <li><a href="/report/excel/">Отчет Excel</a></li>
+            <li><a href="/admin/">Админ панель</a></li>
+        </ul>
+    </nav>
+
+    <div>
+        {% block content %}
+        {% endblock %}
+    </div>
+</body>
+</html>

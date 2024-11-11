@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<title>Список нефтепродуктов</title>
+</head>
+<body>
+<h1>Список нефтепродуктов</h1>
+<ul>
+    {% for product in products %}
+        <li>{{ product.name }} - Плотность: {{ product.density }} кг/м³</li>
+    {% endfor %}
+</ul>
+<a href="{% url 'add_oil_product' %}">Добавить нефтепродукт</a>
+</body>
+</html>
